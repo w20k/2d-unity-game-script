@@ -1,4 +1,4 @@
-# 2d-unity-game-script
+# unity-2d-script-collection
 It cointains all the scripts used in my 2D game , made with unity engine 2019..1.2f1
 
 Scripts are:

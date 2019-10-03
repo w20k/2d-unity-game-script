@@ -19,7 +19,7 @@ public class levelLoader : MonoBehaviour
          operation.allowSceneActivation = false; 
         //float progress = Mathf.Clamp01(operation.progress / .9f);   
         while (operation.progress < 0.9f)
-        { yield return null;
+        { //yield return null;
         } 
         operation.allowSceneActivation = true;   
         Time.timeScale = 1f;

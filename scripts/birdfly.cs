@@ -98,8 +98,7 @@ public class birdfly : MonoBehaviour
          }
     }
      void OnParticleCollision(GameObject other) {
-         if (other.CompareTag("traps")){
-        //gameManager.GameOver();//
+         if (other.CompareTag("traps"){
            gameOverEffect();
          }
      }    

@@ -8,7 +8,6 @@ public class pillarGen : MonoBehaviour
     public Transform generationPoint;
     public float distanceBetween;
     private float platformWidth;
-    //public float height;
     [SerializeField] private int whatToSpawn;
     private int ButterflySpawn;
    
@@ -40,33 +39,33 @@ public class pillarGen : MonoBehaviour
                     break;
                 case 3:
                     GameObject new2 = Instantiate (Chars, transform.position, transform.rotation);
+                    new2.transform.position = new Vector3(transform.position.x + platformWidth-2, transform.position.y , transform.position.z);
                     new2.SetActive(true);
-                    transform.position = new Vector3(transform.position.x + platformWidth-2, transform.position.y , transform.position.z);
                     break;
                 case 4:
-                    GameObject new3 = Instantiate (Chars1, transform.position, transform.rotation);
+                    GameObject new3 = Instantiate (Chars1, transform.position, transform.rotation);                   
+                    new3.transform.position = new Vector3(transform.position.x + platformWidth-4, transform.position.y , transform.position.z);
                     new3.SetActive(true);
-                    transform.position = new Vector3(transform.position.x + platformWidth-4, transform.position.y , transform.position.z);
                     break;
                 case 5:
-                    GameObject new4 = Instantiate (Chars2, transform.position, transform.rotation);
+                    GameObject new4 = Instantiate (Chars2, transform.position, transform.rotation);                    
+                    new4.transform.position = new Vector3(transform.position.x + platformWidth-1, transform.position.y , transform.position.z);
                     new4.SetActive(true);
-                    transform.position = new Vector3(transform.position.x + platformWidth-1, transform.position.y , transform.position.z);
                     break;
                  case 6:
-                    GameObject new5 = Instantiate (Chars3, transform.position, transform.rotation);
+                    GameObject new5 = Instantiate (Chars3, transform.position, transform.rotation);                    
+                    new5.transform.position = new Vector3(transform.position.x + platformWidth-1, transform.position.y , transform.position.z);
                     new5.SetActive(true);
-                    transform.position = new Vector3(transform.position.x + platformWidth-1, transform.position.y , transform.position.z);
                     break;
                 case 7:
-                    GameObject new6 = Instantiate (newobst, transform.position, transform.rotation);
+                    GameObject new6 = Instantiate (newobst, transform.position, transform.rotation);                    
+                    new6.transform.position = new Vector3(transform.position.x + platformWidth+2, transform.position.y , transform.position.z);
                     new6.SetActive(true);
-                    transform.position = new Vector3(transform.position.x + platformWidth+2, transform.position.y , transform.position.z);
                     break;
                 case 8:
                     GameObject new7 = Instantiate (revolveObs, transform.position, transform.rotation);
+                    new7.transform.position = new Vector3(transform.position.x + platformWidth+1, transform.position.y , transform.position.z);
                     new7.SetActive(true);
-                    transform.position = new Vector3(transform.position.x + platformWidth+1, transform.position.y , transform.position.z);
                     break;
             }
             switch (ButterflySpawn){

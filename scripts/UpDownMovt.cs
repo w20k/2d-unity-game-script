@@ -5,19 +5,21 @@ using UnityEngine;
 public class UpDownMovt : MonoBehaviour
 {
     public float speed = 1;
-    
+    Rigidbody2D rb;
     // Switch Movement Direction every x seconds
     public float switchTime = 2;
-
+    void Awake(){
+        rb = GetComponent<Rigidbody2D>();
+    }
     void Start() {
         // Initial Movement Direction
-        GetComponent<Rigidbody2D>().velocity = Vector2.up * speed;
+        rb.velocity = Vector2.up * speed;
         
         // Switch every few seconds
         InvokeRepeating("Switch", 0, switchTime);
     }
     
     void Switch() {
-        GetComponent<Rigidbody2D>().velocity *= -1;
+        rb.velocity *= -1;
     }
 }

@@ -26,14 +26,14 @@ public class score : MonoBehaviour
         distanceText.text = Mathf.Round(scoreCount) + "m";
         if(scoreCount > highscore){
             highscore = (int)scoreCount;
-            HighScore.text =  highscore + "m";
-          //  PlayerPrefs.SetInt("HighScore", highscore);
-           // PlayerPrefs.Save();
+            HighScore.text =  highscore + "m";    
         }
 
         if(target == null){
             scoreIncreasing = false;
             finalDistanceText.text = "Distance travelled: 	 " + Mathf.Round(scoreCount);
+            PlayerPrefs.SetInt("HighScore", highscore);
+            PlayerPrefs.Save();
             int x = (highscore / 40);
             LevelText.text = "Level " + x;
         }

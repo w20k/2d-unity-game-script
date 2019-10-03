@@ -27,8 +27,8 @@ public class score : MonoBehaviour
         if(scoreCount > highscore){
             highscore = (int)scoreCount;
             HighScore.text =  highscore + "m";
-            PlayerPrefs.SetInt("HighScore", highscore);
-            PlayerPrefs.Save();
+          //  PlayerPrefs.SetInt("HighScore", highscore);
+           // PlayerPrefs.Save();
         }
 
         if(target == null){

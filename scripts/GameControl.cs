@@ -38,8 +38,8 @@ public class GameControl : MonoBehaviour
     }
 
     void Start(){
-       // scenefaderScript = GameObject.FindGameObjectWithTag("fader").GetComponent<SceneFader>();
-       // highcoin = PlayerPrefs.GetInt("HighCoin");
+       scenefaderScript = GameObject.FindGameObjectWithTag("fader").GetComponent<SceneFader>();
+       highcoin = PlayerPrefs.GetInt("HighCoin");
         HighCoin.text = highcoin + ".00";
         source = GetComponent<AudioSource>();
     }

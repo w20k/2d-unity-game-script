@@ -13,16 +13,18 @@ public class cameraFollow : MonoBehaviour
        if(transform.position.y < bottomY){
           transform.position = new Vector3(transform.position.x, bottomY, transform.position.z);
        }
-        if(target == null){
-           Vector3 desiredPosition = new Vector3(transform.position.x, 2, transform.position.z);
-            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
-            transform.position = smoothedPosition;
-        }
+
   }
     void FixedUpdate()
     {   if (target != null)
         {
             Vector3 desiredPosition = target.position + offset;
+            Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
+            transform.position = smoothedPosition;
+        }
+        
+         if(target == null){
+           Vector3 desiredPosition = new Vector3(transform.position.x, 2, transform.position.z);
             Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
             transform.position = smoothedPosition;
         }
